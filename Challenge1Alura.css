@@ -1,0 +1,196 @@
+body{
+    background-color: lightsteelblue;
+}
+
+header img{
+    display: inline-block;
+}
+
+#cuadroEncriptador{
+    display: inline-block;
+    position: absolute; top: 100px; left: 200px;
+}
+
+#cuadroEncriptador textarea{
+    font-size: 20px;
+    background-color: lightsteelblue;
+    width: 600px;
+    height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    border: none;
+}
+
+#cuadroEncriptador textarea:focus{
+    outline: none;
+    border: none;
+}
+
+.cuadroInformativo{
+    box-sizing: border-box;
+    width: 400px;
+    background-color: aliceblue;
+    display: inline-block;
+    height: 900px;
+    box-sizing: border-box;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    position: absolute; top: 20px; left: 940px;
+}
+.cuadroInformativo img{
+    margin: 200px 0 0 0;
+}
+
+.cuadroInformativo label{
+    font-size: 20px;
+    display:inline-block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 30px 30px;
+}
+.cuadroInformativo textarea{
+    background-color: aliceblue;
+    font-size: 15px;
+    display: inline-block;
+    text-align: left;
+    box-sizing: border-box;
+    width: 80%;
+    border:none;
+    height: 20%;
+    margin: 0 0 30px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    resize: none;
+}
+
+.cuadroInformativo textarea:focus{
+    outline: none;
+}
+
+#botones{
+    display: inline-block;
+    position: absolute; top: 750px; left: 200px;
+}
+
+#botones #encriptar, #copiar, #desencriptar, #copiar{
+    width: 300px;
+    height: 67px;
+    border-radius: 15px;
+    background-color: darkblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+#botones #encriptar:hover{
+    font-size: 15px;
+}
+
+#botones #desencriptar, #copiar{
+    background-color: white;
+    /*margin: 0 0 0 0;*/
+    color: darkblue;
+}
+    #botones #desencriptar:hover{
+    font-size: 15px;
+}
+
+#botones #copiar{
+    position: absolute;
+    left: 785px;
+    display: none;
+}
+
+#botones #copiar:hover{
+    font-size: 15px;
+}
+
+/*Layounts responsivos*/
+@media screen and (max-width:480px){
+    body{
+        font-size: 10%;
+    }
+    #textoEncriptar{
+        font-size: 10%;
+    }
+    #cuadroEncriptador{
+        width: 75%;
+        height: 50%;
+        right: 10%;
+        display: inline-block;
+        margin: 0 0 5% 0;
+        padding: 1%;
+        position: relative; top: 2em; left: 0;
+    }
+    #cuadroEncriptador textarea{
+        width: 100%;
+        height: 25%;
+    }
+    .cuadroInformativo{
+        width: 80%;
+        height: 80%;
+        position: absolute; top: 75%; left: 10%;
+    }
+    .cuadroInformativo #labelTexto{
+        margin: 0 auto;
+    }
+    .cuadroInformativo #imagenTextoInformativo{
+        width: 80%;
+        height: 30%;
+        margin: 1% 5% 5% 10%;
+    }
+    .cuadroInformativo textarea{
+        height: 34%;
+        margin: 0 0 30px 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        resize: none;
+    }
+
+    .cuadroInformativo img{
+        margin: auto 0 0 0;
+    }
+
+    .cuadroInformativo #texto{
+        height: 50%;
+    }
+
+    #botones{
+        margin: 5% 0 0 0;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 200px; /* Establece la altura deseada */
+        width: 75%;
+    }
+
+    #botones #encriptar, #copiar, #desencriptar, #copiar{
+        margin: 0 0 2% 15%;
+        position: relative;
+        display: 10%;
+        width: 50%;
+        height: 4em;
+        border-radius: 15px;
+        background-color: darkblue;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 0.5s;
+    }
+    #desencriptar{
+        margin-top: 0%;
+     }
+    #botones #copiar{
+        position: absolute;
+        left: 18%;
+        margin-top: 100px;
+        margin: 180% 0 auto;
+    }
+    #botones p{
+        position: relative;
+        font-size: 10px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

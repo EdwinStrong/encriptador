@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head><!-- Formato del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Challenger encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Challenge1Alura.css">
+</head>
+
+<body>
+    <header><!-- ENCABEZADO -->
+        <img src="Imagenes/Logo-1.png" alt="Logo 1">
+    </header>
+
+    <main><!-- CONTENIDO PRINCIPAL -->
+        <form>
+            <div id="cuadroEncriptador"><!-- Caja de texto para encriptar texto -->
+                <textarea cols="30" rows="10" id="textoEncriptar" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+
+            <div class="cuadroInformativo"> <!-- CUADRO DE CONTENIDO -->
+                <img src="Imagenes/Muñeco.png" alt="MuñecoAlura" id="imagenTextoInformativo">
+                <label ID="labelTexto"><strong>NINGÚN MENSAJE FUE ENCONTRADO</strong></label>
+                <textarea readonly id="texto" cols="30" rows="10" placeholder="Ingrese el texto que desees encriptar o desencriptar"></textarea>
+            </div>
+
+            <div id="botones"><!-- BOTONES -->
+                <p>&#9763 Solo letras minúsculas y sin acentos</p>
+                <input type="button" id="encriptar" value="Encriptar" onclick="encriptarTexto()">
+                <input type="button" id="desencriptar" value="Desencriptar" onclick="desencriptarTexto()">
+                <input type="button" id="copiar" value="Copiar" onclick="copiarTexto()">
+            </div>
+        </form>
+
+        <script src="Challenge1Alura.js">//Código JAVA
+        </script>
+    </main>
+</body>
+
+</html>
