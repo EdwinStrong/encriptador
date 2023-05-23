@@ -76,7 +76,7 @@ function desencriptarTexto() {
     let variable = document.getElementById("textoEncriptar").value;//Obtener el texto a encriptar
 
     let image = document.getElementById("imagenTextoInformativo");
-    let label = document.getElementById("labelTexto");
+    let label = document.getElementById("labelTexto");//Aumentar el largo del cuadro de texto
     let botonCopiar = document.getElementById("copiar");
 
     let contieneCaracterEspecial = caracterEspecial.test(variable);//Retorna true o false
