@@ -1,17 +1,19 @@
 let textoCopiar;
 
 /*Función para deshabilitar las etiquetas*/
-function deshabilitarEtiquetas(image, label, botonCopiar) {
+function deshabilitarEtiquetas(image, label, botonCopiar, textoMostrar) {
     image.style.display = "none";//Desaparecer imagen
     label.style.display = "none";//Desaparecer el label de no texto
     botonCopiar.style.display = "inline-block";//Activar el botón de copiar
+    textoMostrar.style.height="45%";//Aumenta la altura
 }
 
 /*Función para habilitar las etiquetas*/
-function habilitarEtiquetas(image, label, botonCopiar) {
+function habilitarEtiquetas(image, label, botonCopiar, textoMostrar) {
     image.style.display = "inline";
     label.style.display = "inline-block";//Reaparecer el label de no texto
     botonCopiar.style.display = "none";
+    textoMostrar.style.height="30%";
 }
 
 /*Función para detectar cuando el texto es vacío o contiene caracteres*/
@@ -40,11 +42,12 @@ function encriptarTexto() {
     let image = document.getElementById("imagenTextoInformativo");
     let label = document.getElementById("labelTexto");
     let botonCopiar = document.getElementById("copiar");
+    let textoMostrar=document.getElementById("texto");
 
     let contieneCaracterEspecial = caracterEspecial.test(variable);//Retorna true o false
 
     if (textoEncriptadoVacio(variable, contieneCaracterEspecial) == 0) {
-        deshabilitarEtiquetas(image, label, botonCopiar);
+        deshabilitarEtiquetas(image, label, botonCopiar, textoMostrar);
         variable = variable.toLowerCase();
         let letras = variable.split("");// Convertir en un array de caracteres
         let i = 0;
@@ -59,11 +62,11 @@ function encriptarTexto() {
             i++;//Aumentador para i
         }
         variable = letras.join(""); // Unir las letras en un nuevo string
-        document.getElementById("texto").value = variable;
+        textoMostrar.value = variable;
         textoCopiar = variable;//Almacenar el texto encriptado
     }
     else {
-        habilitarEtiquetas(image, label, botonCopiar);
+        habilitarEtiquetas(image, label, botonCopiar, textoMostrar);
     }
 }
 
@@ -78,11 +81,12 @@ function desencriptarTexto() {
     let image = document.getElementById("imagenTextoInformativo");
     let label = document.getElementById("labelTexto");//Aumentar el largo del cuadro de texto
     let botonCopiar = document.getElementById("copiar");
+    let textoMostrar=document.getElementById("texto");
 
     let contieneCaracterEspecial = caracterEspecial.test(variable);//Retorna true o false
 
     if (textoEncriptadoVacio(variable, contieneCaracterEspecial) == 0) {
-        deshabilitarEtiquetas(image, label, botonCopiar);
+        deshabilitarEtiquetas(image, label, botonCopiar,textoMostrar);
         variable = variable.toLowerCase();
         let caracteres;
         for (let i = 0; i < 5; i++) {
@@ -94,8 +98,7 @@ function desencriptarTexto() {
         textoCopiar = variable;//Almacenar el texto encriptado
     }
     else {
-        habilitarEtiquetas(image, label, botonCopiar);
-        document.getElementById("textoEncriptar").focus;
+        habilitarEtiquetas(image, label, botonCopiar,textoMostrar);
     }
 }
 

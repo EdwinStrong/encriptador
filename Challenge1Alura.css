@@ -58,7 +58,7 @@ header img{
     box-sizing: border-box;
     width: 80%;
     border:none;
-    height: 80%;
+    height: 30%;
     margin: 0 0 30px 30px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -71,7 +71,7 @@ header img{
 
 #botones{
     display: inline-block;
-    position: absolute; top: 750px; left: 200px;
+    position: absolute; top: 750px; left: 100px;
 }
 
 #botones #encriptar, #copiar, #desencriptar, #copiar{
@@ -96,14 +96,14 @@ header img{
     font-size: 15px;
 }
 
-#botones #copiar{
+#copiar{
     position: absolute;
-    top: 35%;
-    left: 785px;
+    top: 81%;
+    left: 10%;
     display: none;
 }
 
-#botones #copiar:hover{
+#copiar:hover{
     font-size: 15px;
 }
 
@@ -183,11 +183,11 @@ header img{
     #desencriptar{
         margin-top: 0%;
      }
-    #botones #copiar{
+    #copiar{
         position: absolute;
         left: 18%;
         margin: 0;
-        top: 300%
+        top: 50%
     }
     #botones p{
         position: relative;
