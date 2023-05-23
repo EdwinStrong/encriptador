@@ -5,7 +5,7 @@ function deshabilitarEtiquetas(image, label, botonCopiar, textoMostrar) {
     image.style.display = "none";//Desaparecer imagen
     label.style.display = "none";//Desaparecer el label de no texto
     botonCopiar.style.display = "inline-block";//Activar el botón de copiar
-    textoMostrar.style.height="45%";//Aumenta la altura
+    textoMostrar.style.height="80%";//Aumenta la altura
 }
 
 /*Función para habilitar las etiquetas*/
